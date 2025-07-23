@@ -1,0 +1,475 @@
+@charset "UTF-8";
+
+/* HEADER
+----------------------------- */
+html {
+    font-size: 100%; /* Base font size */
+}
+
+body {
+    /* font-family: "Yu Gothic", "游ゴシック Medium", "YuGothic", "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif; */
+    font-family: "Segoe UI";
+    line-height: 1.7;
+    color: #432;
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+}
+
+img {
+    max-width: 100%; /* Responsive images */
+}
+
+.logo {
+    height: 70px; /* Fixed width for logo */
+    margin-top: 14px;
+}
+
+.main-nav {
+    display: flex;
+    font-size: 1.25rem; /* Font size for navigation links */
+    text-transform: uppercase; /* Uppercase text for navigation links */
+    margin-top: 34px; /* Margin to separate from the top */
+    list-style: none; /* Remove bullet points from list */
+}
+
+.main-nav li {
+    margin-left: 36px; /* Space between navigation items */
+}
+
+.main-nav a {
+    color: #432; /* Link color */
+}
+
+.main-nav a:hover {
+    color: #0bd; /* Change color on hover */
+}
+
+.page-header {
+    background-color: #eee;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* Space between logo and navigation */
+}
+
+.wrapper {
+    /* max-width: 1100px; */
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* HOME
+---------------------------- */
+.home-content {
+    text-align: center; /* Center the text */
+    margin-top: 10%; /* Margin to separate from the header */
+}
+
+.home-text {
+    padding-bottom: 10vh;
+}
+
+.home-content p {
+    font-size: 2em; /* Font size for the paragraph */
+    font-weight: 500;
+    margin: 10px 0 42px;
+}
+
+
+/* TITLE
+----------------------------- */
+.page-title {
+    font-size: 5rem; /* Font size for the page title */
+    font-family: "Segoe UI";
+    text-transform: uppercase; /* Uppercase text for the title */
+    font-weight: 600;
+}
+
+/* BUTTON
+---------------------------- */
+.button {
+    font-size: 1.375rem; /* Font size for the button text */
+    background-color: #0bd; /* Background color for the button */
+    color: #fff; /* Text color for the button */
+    border-radius: 5px; /* Rounded corners */
+    padding: 14px 32px; /* Padding for the button */
+}
+
+.button:hover {
+    background-color: #0090aa; /* Darker shade on hover */
+}
+
+/* BACKGROUND-IMAGE
+------------------------- */
+.big-bg {
+    background-size: cover; /* Cover the entire area */
+    background-position: center top; /* Center the image */
+    /* background-repeat: no-repeat; Prevent repeating the image */
+}
+
+#home {
+    background-color: #eee;
+    /* background-image: url('../images/main-bg.jpg'),linear-gradient(#c9ffbf, #ffafbd); */
+    /* background-color: #0bd; */
+    /* background-blend-mode: luminosity; */
+    height: 100vh;
+}
+
+#home .page-title {
+    text-transform: none; /* No uppercase for the home title */
+}
+
+#about {
+    background-color: rgb(219, 212, 204);
+    /* background-image: url('../images/news-bg.jpg'); */
+    height: 100vh;
+    padding-top: 30vh;
+    /* margin-bottom: 40px; */
+}
+
+#about .about-maintitle {
+    text-align: center;
+}
+
+.about-maintitle {
+    display: flex; /* Flexbox for layout */
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.about-logo {
+    height: 100px; /* Fixed height for the logo */
+    margin-right: 20px; /* Space between logo and title */
+    bottom: 0;
+    padding-top: 20px;
+}
+
+#skills {
+    background-color: #eee; /* Background color for the skills section */
+    min-height: 100vh;
+    padding: 10vh 0; /* Padding at the top */
+    font-family: "Segoe UI";
+}
+
+.skills-title {
+    text-align: center; /* Center the skills title */
+    font-size: 1.5rem; /* Font size for the skills title */
+    margin: 20px 0; /* Margin at the bottom */
+}
+
+.skills-list {
+    margin: 0 4%;
+}
+
+.skills-level {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between;
+    margin-top: 20px; /* Margin at the top */
+    list-style: none;
+}
+
+.skills-level li:first-child {
+    text-align: left;
+    flex: 1;
+}
+
+.skills-level li:nth-child(2) {
+    text-align: center;
+    flex: 1;
+}
+
+.skills-level li:last-child {
+    text-align: right;
+    flex: 1;
+}
+
+.skills-level li {
+    font-size: 17px;
+    margin: 0 20px; /* Space between skill level items */
+}
+
+.item {
+    background-color: #ddd;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.star5_rating{
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #fff; /* ホワイトカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before, .star5_rating:after{
+    content: '★★★★★';
+}
+
+.star5_rating:after{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #000; /* ブラックカラー 自由に設定化 */
+}
+
+.star5_rating[data-rate="5"]:after{ width: 100%; } /* 星5 */
+.star5_rating[data-rate="4.5"]:after{ width: 90%; } /* 星4.5 */
+.star5_rating[data-rate="4"]:after{ width: 80%; } /* 星4 */
+.star5_rating[data-rate="3.5"]:after{ width: 70%; } /* 星3.5 */
+.star5_rating[data-rate="3"]:after{ width: 60%; } /* 星3 */
+.star5_rating[data-rate="2.5"]:after{ width: 50%; } /* 星2.5 */
+.star5_rating[data-rate="2"]:after{ width: 40%; } /* 星2 */
+.star5_rating[data-rate="1.5"]:after{ width: 30%; } /* 星1.5 */
+.star5_rating[data-rate="1"]:after{ width: 20%; } /* 星1 */
+.star5_rating[data-rate="0.5"]:after{ width: 10%; } /* 星0.5 */
+.star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
+
+.project-description {
+    font-size: 16px; /* Font size for the project description */
+    font-family: "Segoe UI";
+    text-align: justify;
+    max-width: 80%; /* Maximum width for the projects content */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Padding for the projects content */
+}
+
+.item img {
+    width: 80%; /* Full width for images in items */
+    border-radius: 10px; /* Rounded corners for images */
+}
+
+.github-link {
+    text-align: center; /* Center the GitHub link */
+    margin-top: 20px; /* Margin at the top */
+}
+
+.github-link img {
+    width: 40px;
+    height: auto;
+}
+
+/* FOOTER
+-------------------------- */
+footer {
+    background-color: #432; /* Background color for the footer */
+    /* color: #fff; Text color for the footer */
+    text-align: center; /* Center the text in the footer */
+    padding: 26px 0; /* Padding for the footer */
+}
+
+footer p {
+    color: #fff; /* Text color for the footer */
+    font-size: 0.875rem; /* Font size for the footer text */
+}
+
+/* ABOUT-CONTENT
+------------------------ */
+.about-contents {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between article and aside */
+    margin-bottom: 50px; /* Margin at the bottom */
+}
+
+.about-title {
+    font-family: "Segoe UI"; /* Font family for the title */
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-description {
+    text-align: justify;
+    font-size: 16px;
+    /* min-width: 400px; */
+    max-width: 40vw;
+    margin-left: 20px;
+}
+
+/* PROJECT
+---------------------- */
+#projects {
+    background-image: url('../images/menu-bg.jpg');
+    min-height: 100vh;
+}
+.projects-content {
+    max-width: 560px;
+    margin-top: 10%;
+}
+.projects-content .page-title {
+    text-align: center; /* Center the text */
+}
+.projects-content p {
+    font-size: 1.125rem; /* Font size for the paragraph */
+    margin: 10px 0 0;
+}
+
+.grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 26px; /* Space between grid items */
+    margin-top: 6%; /* Margin at the top */
+    margin-bottom: 50px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+.big-box {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.big-box img {
+    width: 100%; /* Full width for the big box image */
+    height: 94%; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+/* CONTACT
+----------------------- */
+#contact {
+    background-color: rgb(219, 212, 204);
+    min-height: 100vh; /* Minimum height for the contact section */
+    padding-top: 10vh;
+}
+
+.main-title {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    text-align: center; /* Center the main title */
+    font-size: 50px;
+    margin-bottom: 20px; /* Margin at the bottom */
+}
+
+.main-content {
+    display: flex; /* Flexbox for layout */
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+/* FORM */
+form div {
+    text-align: center;
+    margin-bottom: 14px; /* Margin at the bottom of form fields */
+}
+
+.contact-form {
+    display: flex; /* Flexbox for layout */
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    max-width: 480px;
+    margin: 20px auto;
+}
+
+.contact-item {
+    width: 45%;
+}
+.message-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border-bottom: #555 solid 1.5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    max-width: 240px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    max-width: 480px;
+    height: 6rem; /* Height for textarea */
+}
+
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    /* HEADER */
+    .main-nav {
+        font-size: 1rem; /* Smaller font size for mobile */
+        margin-top: 10px; /* Adjust margin for mobile */
+    }
+
+    /* HOME */
+    .home-content {
+        margin-top: 20%; /* Adjust margin for mobile */
+    }
+    .page-header {
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center; /* Center items */
+    }
+
+    /* ABOUT */
+    .about-contents {
+        flex-direction: column; /* Stack article and aside vertically */
+    }
+
+    #about .page-title {
+        margin-top: 30px;
+    }
+    .about-title {
+        font-size: 1.375rem; /* Smaller font size for mobile */
+    }
+    .about-maintitle {
+        justify-content: space-around;
+        margin: 0 15%;
+    }
+    .about-description {
+        font-size: 0.875rem; /* Smaller font size for mobile */
+        margin-top: 10px;
+    }
+    .about-title,
+    .about-description {
+        margin-left: 20px; /* Remove left margin for mobile */
+    }
+
+    /* PROJECT */
+    .menu-content {
+        margin-top: 20%;
+    }
+    .big-box {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .big-box img {
+        height: 100%;
+    }
+
+    /* CONTACT */
+    #contact .page-title{
+        margin-top: 40px;
+    }
+
+    /* FORM */
+    input[type="text"],
+    input[type="email"] {
+        max-width: 100%; /* Full width for input fields on mobile */
+    }
+}
