@@ -438,8 +438,10 @@ input[type="submit"] {
         font-size: 1.375rem; /* Smaller font size for mobile */
     }
     .about-maintitle {
-        justify-content: space-around;
-        margin: 0 15%;
+        justify-content: center;
+    }
+    .about-maintitle li {
+        margin-right: 5%;
     }
     .about-description {
         font-size: 0.875rem; /* Smaller font size for mobile */
@@ -451,15 +453,14 @@ input[type="submit"] {
     }
 
     /* PROJECT */
-    .menu-content {
-        margin-top: 20%;
-    }
-    .big-box {
-        grid-column: auto;
-        grid-row: auto;
-    }
-    .big-box img {
-        height: 100%;
+    .grid {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 26px; /* Space between grid items */
+        margin-top: 6%; /* Margin at the top */
+        margin-bottom: 50px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     /* CONTACT */
