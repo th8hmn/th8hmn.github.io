@@ -293,7 +293,7 @@ footer p {
     text-align: justify;
     font-size: 16px;
     /* min-width: 400px; */
-    max-width: 40vw;
+    max-width: 50vw;
     margin-left: 20px;
 }
 
@@ -417,6 +417,10 @@ input[type="submit"] {
         margin-top: 10px; /* Adjust margin for mobile */
     }
 
+    .main-nav li {
+        margin-left: 15px; /* Space between navigation items */
+    }
+
     /* HOME */
     .home-content {
         margin-top: 20%; /* Adjust margin for mobile */
@@ -440,9 +444,6 @@ input[type="submit"] {
     .about-maintitle {
         justify-content: center;
     }
-    .about-maintitle li {
-        margin-right: 5%;
-    }
     .about-description {
         font-size: 0.875rem; /* Smaller font size for mobile */
         margin-top: 10px;
@@ -454,13 +455,18 @@ input[type="submit"] {
 
     /* PROJECT */
     .grid {
-        display: grid; /* Use grid layout */
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 26px; /* Space between grid items */
-        margin-top: 6%; /* Margin at the top */
-        margin-bottom: 50px;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .skills-list {
+        margin: 0 1%;
+    }
+
+    .skills-level li {
+        font-size: 17px;
+        margin: 0 5px; /* Space between skill level items */
     }
 
     /* CONTACT */
